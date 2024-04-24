@@ -1,17 +1,17 @@
-package br.unipe.boaspraticas.exercicios.solid.lsp.pessoas;
+    package br.unipe.boaspraticas.exercicios.solid.lsp.pessoas;
 
-class Pessoa {
-    private String nome;
+    import lombok.Getter;
 
-    public Pessoa(String nome) {
-        this.nome = nome;
+    @Getter
+    class Pessoa implements FazSom {
+        private String nome;
+
+        public Pessoa(String nome) {
+            this.nome = nome;
+        }
+
+        @Override
+        public void fazerSom() {
+            System.out.println("Oi!");
+        }
     }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void fazerSom() {
-        System.out.println("Oi!");
-    }
-}

@@ -1,5 +1,8 @@
 package br.unipe.boaspraticas.exercicios.solid.lsp.pessoas;
 
+import lombok.Getter;
+
+@Getter
 class Funcionario extends Pessoa {
     private double salario;
 
@@ -8,17 +11,13 @@ class Funcionario extends Pessoa {
         this.salario = salario;
     }
 
-    public double getSalario() {
-        return salario;
-    }
 
-    // Sobrescrevendo o método fazerSom() na classe Funcionario
     @Override
     public void fazerSom() {
         System.out.println("Bom dia!");
     }
 
-    // Método específico da classe Funcionario
+
     public void calcularSalario() {
         // Lógica para calcular o salário do funcionário
     }
